@@ -1,134 +1,102 @@
 body {
-  background: #f7d5f7 url("/img/cherrie.gif"); /*Replace with your own background*/
-	background-size: cover;
+  background: #222 url("/img/pexels-4254548-crop2.jpg"); /*Replace with your own background image.*/
+  background-size: cover;
 	background-attachment: fixed;
   background-position:center;
-	font-family: "VT-100", fixedsys, System, monospace;
-	font-size: 13px;
-  }
-  
-center {
-  text-align: center;
+	background-size: cover;
+	color: white;
+	font-size: 13.5px;
+	font-family: "Open Sans", sans-serif;
   }
   
 a {
-  color: #3c5832;
-  }
-
-/*All sidebars go in here.*/  
-.sidebar-group {
-  position: fixed;
-  top: 0;
-  margin-top: 25px;
+  color: #33c1ff;
   }
   
-/*Code shared by all window-style boxes. To see what different specific sidebar classes look like, check the demo page.*/
-.sidebar, .mini-sidebar, .wide-sidebar, .box {
-  background: #dff7d5;
-  border-radius: 5px;
-  border: 1px solid #618a50;
-  box-shadow: 2px 2px #3c5832;
+a:hover {
+  color: #95dfff;
   }
   
-/*Prevent image overflow.*/
-.sidebar img, .mini-sidebar img, .wide-sidebar img, .box img {
-  max-width: 100%;
-  height:auto; /*Prevent squishing*/
+.links {
+  border-top: 1px solid #ccc;
+  background: rgb(238, 238, 238, 0.05);
+  padding-left: 25px;
+  padding-right: 25px;
+  list-style-type:none;
+  text-align: center;
   }
   
-.sidebar, .sidebar-box {
+/*For the first link in the links bar*/
+.link-first {
   display: inline-block;
-  vertical-align: top;
-  width: 160px;
+  border-right: 1px solid #ccc;
+  padding: 2px;
+  padding-right: 11px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  text-align: center;
   }
   
-/*Container for vertical stacks of multiple mini-sidebars*/
-.sidebar-box {
-  margin-left: 10px;
+.link {
+  display: inline-block;
+  border-right: 1px solid #ccc;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  text-align: center;
   }
   
-.sidebar {
-  width: 160px;
-  margin-left: 25px;
-  }
-  
-.mini-sidebar {
-  margin-bottom: 25px;
-  }
-  
-.wide-sidebar {
-  margin-left: 25px;
-  margin-top: 25px;
-  width: 340px;
-  min-height: 150px;
-  }
-  
-/*Inside/main text of window boxes.*/
-.inner {
-  padding: 10px;
-  padding-bottom: 5px;
-  padding-top: 0px;
+/*For the last link in the links bar*/
+.link-last {
+  display: inline-block;
+  padding: 2px;
+  padding-left: 9px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  text-align: center;
   }
 
-/*The title bar at the top of window boxes.*/
-.title-bar, .box-title-bar {
-  background: #7aa469;
-  color: white;
-  font-weight: bold;
-  padding: 5px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+.main {
+  margin: 0 auto;
+  width: 500px;
+  background: rgb(10, 10, 10, 0.9);
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  /*Quick guide to box-shadow:
+    First two numbers are vertical and horizontal offset.
+    Third number is how far to spread the fuzzy effect.
+    Fourth number is how much solid border/shadow there should be before the fuzzy effect begins.
+  */
+  box-shadow: 0px 0px 15px 2px #42c6ff;
+  }
+
+.main-inner {
+  padding: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   }
   
-/*The title bar of boxes has slightly more padding, since there's more room to space text.*/
-.box-title-bar {
-  padding: 7px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+/*Prevent image overflow*/  
+.main img {
+  max-width: 100%;
+  height: auto;
   }
   
-/*For the symbol in the top right corner.*/
-.right {
-  float: right;
-  margin-right: 5px;
-  font-family: "Arial", sans-serif;
-  line-height: 12px;
+.footer {
+  margin: 0 auto;
+  padding: 15px;
+  padding-top: 0px;
+  margin-top: -20px;
+  text-align: center;
+  font-size: 12px;
   }
-  
-/*Round circular image.*/
-.icon {
-  border: #80aa6f solid 2px;
-  border-radius: 50%;
-  }
-  
-/*Main body text boxes.*/
-.box {
-  margin-top: 25px;
-  margin-left: 400px;
-  width: 455px;
-  margin-bottom: 25px;
-  }
-  
-  
-  
-/*this part is a joke. no need to use it.*/
-.big-quote {
-  font-size: 32px;
-  color: #3c5832;
-  letter-spacing: 6px;
-  word-spacing: 2px;
-  font-family: "Garamond", "Bookman", serif;
-  position: fixed;
-  margin-left: 1050px;
-  margin-top: 300px;
-  top: 0;
-  width: 300px;
-  }
-  
-wide {
-  letter-spacing: 16px;
-  }
-  
-midwide {
-  letter-spacing: 3px;
+
+/*Mobile compatibility*/
+@media(orientation: portrait) {
+    .main {
+      width: 80%;
+      }
   }
